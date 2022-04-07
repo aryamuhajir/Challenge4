@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context=".Register">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register2"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:id="@+id/registers"
+        android:layout_centerHorizontal="true"/>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/gambar"
+        android:layout_below="@id/registers"
+        android:background="@drawable/ic_baseline_adb_24"/>
+
+
+
+    <EditText
+        android:id="@+id/edtNoHP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:autofillHints=""
+        android:hint="@string/no_hp"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="20sp" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:id="@+id/edtEmail"
+        android:inputType="textEmailAddress"
+        android:layout_below="@id/edtNoHP"
+        android:layout_centerInParent="true"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/edtNama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtEmail"
+        android:layout_centerInParent="true"
+        android:hint="@string/nama"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="20sp"
+        android:autofillHints=""
+        android:inputType="text" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:id="@+id/edtPassword2"
+        android:layout_below="@id/edtNama"
+        android:layout_centerInParent="true"
+        android:autofillHints="" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/ulangi_password"
+        android:textSize="20sp"
+        android:inputType="textPassword"
+        android:layout_below="@id/edtPassword2"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:id="@+id/edtKonfirmasiPassword"
+        android:layout_centerInParent="true"
+        android:autofillHints="" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register2"
+        android:layout_below="@id/edtKonfirmasiPassword"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btnRegister2"/>
+
+
+</RelativeLayout>

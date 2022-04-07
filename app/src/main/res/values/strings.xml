@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Challenge4</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="catatan">CATATAN</string>
+    <string name="tambah">TAMBAH</string>
+    <string name="edit">EDIT</string>
+    <string name="hello">Hello,</string>
+    <string name="logout">LOGOUT</string>
+    <string name="password">PASSWORD</string>
+    <string name="log_in">LOG IN</string>
+    <string name="register">Register</string>
+    <string name="register2">REGISTER</string>
+    <string name="email">EMAIL</string>
+    <string name="nama">NAMA</string>
+    <string name="ulangi_password">ULANGI PASSWORD</string>
+    <string name="splash">splash</string>
+    <string name="catatsaddsaadsdsadsadsadsaasddasdsaadsdsaadsadssadadsan">CATATsaddsaadsdsadsadsadsaasddasdsaadsdsaadsadssadadsAN</string>
+    <string name="hapus">hapus</string>
+    <string name="hari">HARI</string>
+    <string name="no_hp">NO HP</string>
+</resources>
