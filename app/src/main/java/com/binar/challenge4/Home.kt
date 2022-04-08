@@ -60,7 +60,7 @@ class Home : Fragment() {
         dbNote = NoteDatabase.getInstance(requireContext())
         //ambil data sharedpreferences
         sf = requireActivity().getSharedPreferences("datalogin", Context.MODE_PRIVATE)
-        val getNama = sf.getString("NAMA","")
+        val getNama = sf.getString("USERNAME","")
         usernameTxt.text = getNama
 
         //logout memakai dialog

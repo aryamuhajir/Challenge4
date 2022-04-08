@@ -8,8 +8,8 @@ interface UserDao {
     @Insert
     fun insertUser(user : User) : Long
 
-    @Query("SELECT * FROM User WHERE nohp = :a")
-    fun getUser(a : String) : List<User>
+    @Query("SELECT nohp FROM User WHERE User.nohp = :nohp AND User.password = :password")
+    fun cekUser(nohp: String, password : String) : String
 
 
 

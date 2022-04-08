@@ -49,7 +49,6 @@ class Login : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         prefs2 = requireActivity().getSharedPreferences("datalogin", Context.MODE_PRIVATE)
-        dbUser = UserDatabase.getInstance(requireContext())
 
 
         btnRegister.setOnClickListener {
@@ -67,17 +66,20 @@ class Login : Fragment() {
             val sf = prefs2.edit()
             val nohp = edtNoHP2.text.toString()
             val password = edtPassword.text.toString()
+            dbUser = UserDatabase.getInstance(requireContext())
 
+            val user = dbUser?.userDao()?.cekUser(nohp, password)
 
-            if (nohp.equals(prefs2.getString("NOHP","")) && password.equals(prefs2.getString("PASSWORD",""))){
+            if (user.isNullOrEmpty()){
+
+                Toast.makeText(requireContext(), "USERNAME ATAU PASSWORD SALAH", Toast.LENGTH_LONG).show()
+            }else{
                 sf.putString("USERNAME", nohp)
                 sf.putString("PASSWORD", password)
                 sf.putString("STATUS", "masuk")
                 sf.apply()
 
                 Navigation.findNavController(requireView()).navigate(R.id.action_login_to_home2)
-            }else{
-                Toast.makeText(requireContext(), "USERNAME ATAU PASSWORD SALAH", Toast.LENGTH_LONG).show()
             }
 
         }
